@@ -6,6 +6,7 @@ const port = 3000;
 // Middleware for Basic Auth validation
 const basicAuth = (req, res, next) => {
   const authHeader = req.headers["authorization"];
+  console.log("🚀 ~ basicAuth ~ authHeader:", authHeader);
 
   if (!authHeader || !authHeader.startsWith("Basic ")) {
     return res.status(401).send("Missing or invalid authorization header");
