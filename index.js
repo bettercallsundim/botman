@@ -35,7 +35,7 @@ const basicAuth = (req, res, next) => {
 
 // Endpoint to test the authentication
 app.get("/validate", basicAuth, (req, res) => {
-  res.status(200).send("Authenticated");
+  res.status(200).json({ msg: "Authenticated" });
 });
 
 // Your other routes
