@@ -20,9 +20,9 @@ const basicAuth = (req, res, next) => {
 
   // Decode base64
   const base64Credentials = authHeader.split(" ")[1];
-  const credentials = Buffer.from(base64Credentials, "base64").toString(
-    "ascii"
-  );
+  // const credentials = Buffer.from(base64Credentials, "base64").toString(
+  //   "ascii"
+  // );
   const [username, password] = credentials.split(":");
 
   // Validate the username and password (this should be replaced with your actual validation logic)
