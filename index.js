@@ -19,7 +19,7 @@ const basicAuth = (req, res, next) => {
   }
 
   // Decode base64
-  const base64Credentials = authHeader.split(" ")[1];
+  const credentials = authHeader.split(" ")[1];
   // const credentials = Buffer.from(base64Credentials, "base64").toString(
   //   "ascii"
   // );
