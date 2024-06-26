@@ -39,7 +39,8 @@ app.get("/validate", basicAuth, (req, res) => {
 });
 
 // Your other routes
-app.get("/some-endpoint", basicAuth, (req, res) => {
+app.post("/emails", (req, res) => {
+  console.log("req.body", req.body);
   res.status(200).send("You are authenticated");
 });
 
