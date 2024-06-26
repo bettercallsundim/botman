@@ -11,7 +11,7 @@ app.use(
 app.use(express.json());
 // Middleware for Basic Auth validation
 const basicAuth = (req, res, next) => {
-  const authHeader = req.headers["authorization"];
+  const authHeader = req.headers["authorize"];
   console.log("🚀 ~ basicAuth ~ authHeader:", authHeader);
 
   if (!authHeader || !authHeader.startsWith("Basic ")) {
